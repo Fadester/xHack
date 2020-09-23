@@ -1,6 +1,6 @@
 #!/bin/bash
 #coded by Fadester
-#v1.1
+#v1.2
 
 green='\033[1;32m'
 red='\e[1;91m'
@@ -59,7 +59,7 @@ printf " \e[1;33m  >  <\e[1;31m|  _  | (_| | (__|   <  \e[0m\n  "
 printf " \e[1;33m /_/\_\e[1;31m\_| |_|\____|\___|_|\_\ \e[0m\n  "
 echo
 printf " \e[34m coded by Fadester \e[0m\n"
-printf " \e[34m v1.1 \e[0m\n"
+printf " \e[34m v1.2 \e[0m\n"
 echo -e "$lightred  This tool was only written for educational purposes. Entering the privacy of others is illegal! " "$farblos"
 }
 show_modules() {
