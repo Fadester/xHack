@@ -334,33 +334,6 @@ done
 
 }
 
-page() {
-cap1="Wi-fi Session Expired"
-cap2="Please login again."
-user_text="Username:"
-pass_text="Password:"
-sub_text="Log-In"
-
-echo "<!DOCTYPE html>" > sites/create/login.html
-echo "<html>" >> sites/create/login.html
-echo "<body bgcolor=\"gray\" text=\"white\">" >> sites/create/login.html
-IFS=$'\n'
-printf '<center><h2> %s <br><br> %s </h2></center><center>\n' $cap1 $cap2 >> sites/create/login.html
-IFS=$'\n'
-printf '<form method="POST" action="login.php"><label>%s </label>\n' $user_text >> sites/create/login.html
-IFS=$'\n'
-printf '<input type="text" name="username" length=64>\n' >> sites/create/login.html
-IFS=$'\n'
-printf '<br><label>%s: </label>' $pass_text >> sites/create/login.html
-IFS=$'\n'
-printf '<input type="password" name="password" length=64><br><br>\n' >> sites/create/login.html
-IFS=$'\n'
-printf '<input value="%s" type="submit"></form>\n' $sub_text >> sites/create/login.html
-printf '</center>' >> sites/create/login.html
-printf '<body>\n' >> sites/create/login.html
-printf '</html>\n' >> sites/create/login.html
-}
-
 start1() {
 
 if [[ -e sendlink ]]; then
@@ -514,7 +487,6 @@ elif [[ $eingabe == "use 2" ]];
 then
 	hack_wlan
 elif [[ $eingabe == "use 3" ]]; then
-  page
   start1
   
 elif [[ $eingabe == "help" ]];
