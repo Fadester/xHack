@@ -21,11 +21,11 @@ if [[ $user_id == "1000" ]]; then
   exit 1
 fi
 clear
-command -v openssl > /dev/null 2>&1 || { echo >&2 "You need openssl to use this script"; exit 1; }
-command -v tor > /dev/null 2>&1 || { echo >&2 "You need TOR to use this script"; }
-command -v aircrack-ng > /dev/null 2>&1 || { echo >&2 "You need aircrack-ng to use this script"; exit 1; }
-command -v curl > /dev/null 2>&1 || { echo >&2 "You need curl to use this script"; exit 1; }
-command -v php > /dev/null 2>&1 || { echo >&2 "You need php to use this script"; exit 1; }
+command -v openssl > /dev/null 2>&1 || { echo >&2 "You need openssl to use this script! Run install.sh"; exit 1; }
+command -v tor > /dev/null 2>&1 || { echo >&2 "You need TOR to use this script! Run install.sh"; }
+command -v aircrack-ng > /dev/null 2>&1 || { echo >&2 "You need aircrack-ng to use this script! Run install.sh"; exit 1; }
+command -v curl > /dev/null 2>&1 || { echo >&2 "You need curl to use this script! Run install.sh"; exit 1; }
+command -v php > /dev/null 2>&1 || { echo >&2 "You need php to use this script! Run install.sh"; exit 1; }
 
 trap 'printf "\n";stop;exit 1' 2
 
