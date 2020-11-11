@@ -1,6 +1,6 @@
 #!/bin/bash
 #coded by Fadester
-#v1.4
+#v1.3
 
 green='\033[1;32m'
 red='\e[1;91m'
@@ -63,7 +63,7 @@ printf " \e[1;33m  >  <\e[1;31m|  _  | (_| | (__|   <  \e[0m\n  "
 printf " \e[1;33m /_/\_\e[1;31m\_| |_|\____|\___|_|\_\ \e[0m\n  "
 echo ""
 echo -e "$yellow|$magenta +++$BlueF------=[$green""coded by Fadester$BlueF]=------$magenta+++$farblos$yellow |$farblos"
-echo -e "$yellow|$magenta +++$BlueF------=[$green""      v1.4$BlueF       ]=------$magenta+++$farblos$yellow |$farblos"
+echo -e "$yellow|$magenta +++$BlueF------=[$green""      v1.3$BlueF       ]=------$magenta+++$farblos$yellow |$farblos"
 echo ""
 echo -e "$blink$red""DISCLAIMER $farblos"
 echo -e "$lightred This tool was only written for educational purposes. Entering the privacy of others is illegal!$farblos"
