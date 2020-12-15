@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/bin/bash 
 #installer
-#colors
+
 green='\033[1;32m'
 red='\e[1;91m'
 yellow='\e[0m\e[1;93m'
@@ -12,77 +12,50 @@ lightred='\e[101m'
 blink='\e[5m'
 magenta='\e[35m'
 
-which /usr/bin/openssl > /dev/null 2>&1
-echo $? > /dev/null 2>&1
-if [[ $? == "0" ]]; then
+v=0
+
+command -v openssl > /dev/null 2>&1
+if [[ $? == 1 ]]; then
+	echo -e "$red openssl not found! $farblos"
 	sleep 0.5
-	echo -e "$green [openssl]................FOUND! $farblos"
-else
+	echo -e "$yellow installing openssl... $farblos"
+	sudo apt-get install openssl
+	let v++
+fi 
+command -v tor > /dev/null 2>&1
+if [[ $? == 1 ]]; then 
+	echo -e "$red TOR not found! $farblos"
 	sleep 0.5
-	echo -e "$red [openssl]...............FAIL! $farblos"
-	sleep 0.5
-	echo -e "$yellow [openssl]................INSTALLING... $farblos"
-	sudo apt-get install openssl > /dev/null 2>&1
+	echo -e "$yellow installing TOR... $farblos"
+	sudo apt-get install tor
+	let v++
 fi
-which /usr/bin/curl > /dev/null 2>&1
-echo $? > /dev/null 2>&1
-if [[ $? == "0" ]]; then
+command -v wifite > /dev/null 2>&1
+if [[ $? == 1 ]]; then 
+	echo -e "$red wifite not found! $farblos"
 	sleep 0.5
-	echo -e "$green [curl]...................FOUND! $farblos"
-else
-	sleep 0.5
-	echo -e "$red [curl]..................FAIL! $farblos"
-	sleep 0.5
-	echo -e "$yellow [curl]...................INSTALLING... $farblos"
-	sudo apt-get install curl > /dev/null 2>&1
+	echo -e "$yellow installing wifite... $farblos"
+	sudo apt-get install wifite
+	let v++
 fi
-which /usr/bin/php > /dev/null 2>&1
-echo $? > /dev/null 2>&1
-if [[ $? == "0" ]]; then
+command -v curl > /dev/null 2>&1
+if [[ $? == 1 ]]; then 
+	echo -e "$red curl not found! $farblos"
 	sleep 0.5
-	echo -e "$green [php]....................FOUND! $farblos"
-else
+	echo -e "$yellow installing curl $farblos"
+	sudo apt-get install curl
+	let v++
+fi 
+command -v php > /dev/null 2>&1 
+if [[ $? == 1 ]]; then 
+	echo -e "$red php not found! $farblos" 
 	sleep 0.5
-	echo -e "$red [php]...................FAIL! $farblos"
-	sleep 0.5
-	echo -e "$yellow [php]....................INSTALLING... $farblos"
-	sudo apt-get install php > /dev/null 2>&1
+	echo -e "$yellow installing php... $farblos"
+	sudo apt-get install php
+	let v++
 fi
-which /usr/bin/tor > /dev/null 2>&1
-echo $? > /dev/null 2>&1
-if [[ $? == "0" ]]; then
-	sleep 0.5
-	echo -e "$green [tor]....................FOUND! $farblos"
-else
-	sleep 0.5
-	echo -e "$red [tor]...................FAIL! $farblos"
-	sleep 0.5
-	echo -e "$yellow [tor]....................INSTALLING... $farblos"
-	sudo apt-get install tor > /dev/null 2>&1
+if [[ $v == 0 ]]; then 
+	echo -e "$green All requirements are installed! $farblos"
+else 
+	echo -e "$yellow Run this script again to check requirements! $farblos"
 fi
-which /usr/bin/aircrack-ng > /dev/null 2>&1
-echo $? > /dev/null 2>&1
-if [[ $? == "0" ]]; then
-	sleep 0.5
-	echo -e "$green [aircrack-ng]............FOUND! $farblos"
-else
-	sleep 0.5
-	echo -e "$red [aircrack-ng]............FAIL! $farblos"
-	sleep 0.5
-	echo -e "$yellow [aircrack-ng]...........INSTALLING... $farblos"
-	sudo apt-get install aircrack-ng > /dev/null 2>&1
-fi
-which /usr/bin/ssh > /dev/null 2>&1
-echo $? > /dev/null 2>&1
-if [[ $? == "0" ]]; then
-	sleep 0.5
-	echo -e "$green [ssh]....................FOUND! $farblos"
-else
-	sleep 0.5
-	echo -e "$red [ssh]...................FAIL! $farblos"
-	sleep 0.5
-	echo -e "$yellow [ssh]....................INSTALLING... $farblos"
-	sudo apt-get install ssh > /dev/null 2>&1
-fi
-sleep 0.5
-echo -e "$green All requirements are installed! $farblos"
