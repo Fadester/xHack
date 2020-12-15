@@ -38,6 +38,14 @@ if [[ $? == 1 ]]; then
 	sudo apt-get install aircrack-ng
 	let v++
 fi
+command -v wifite > /dev/null 2>&1
+if [[ $? == 1 ]]; then 
+	echo -e "$red wifite not found! $farblos"
+	sleep 0.5
+	echo -e "$yellow installing wifite... $farblos"
+	sudo apt-get install wifite
+	let v++
+fi
 command -v curl > /dev/null 2>&1
 if [[ $? == 1 ]]; then 
 	echo -e "$red curl not found! $farblos"
