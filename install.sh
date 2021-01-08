@@ -19,7 +19,8 @@ if [[ $? == 1 ]]; then
 	echo -e "$red openssl not found! $farblos"
 	sleep 0.5
 	echo -e "$yellow installing openssl... $farblos"
-	sudo apt-get install openssl
+	sleep 0.5
+	sudo apt-get install -y openssl
 	let v++
 fi 
 command -v tor > /dev/null 2>&1
@@ -27,7 +28,8 @@ if [[ $? == 1 ]]; then
 	echo -e "$red TOR not found! $farblos"
 	sleep 0.5
 	echo -e "$yellow installing TOR... $farblos"
-	sudo apt-get install tor
+	sleep 0.5
+	sudo apt-get install -y tor
 	let v++
 fi
 command -v aircrack-ng > /dev/null 2>&1
@@ -35,7 +37,8 @@ if [[ $? == 1 ]]; then
 	echo -e "$red aircrack-ng not found! $farblos"
 	sleep 0.5
 	echo -e "$yellow installing aircrack-ng... $farblos"
-	sudo apt-get install aircrack-ng
+	sleep 0.5
+	sudo apt-get install -y aircrack-ng
 	let v++
 fi
 command -v wifite > /dev/null 2>&1
@@ -43,7 +46,8 @@ if [[ $? == 1 ]]; then
 	echo -e "$red wifite not found! $farblos"
 	sleep 0.5
 	echo -e "$yellow installing wifite... $farblos"
-	sudo apt-get install wifite
+	sleep 0.5
+	sudo apt-get install -y wifite
 	let v++
 fi
 command -v curl > /dev/null 2>&1
@@ -51,7 +55,8 @@ if [[ $? == 1 ]]; then
 	echo -e "$red curl not found! $farblos"
 	sleep 0.5
 	echo -e "$yellow installing curl $farblos"
-	sudo apt-get install curl
+	sleep 0.5
+	sudo apt-get install -y curl
 	let v++
 fi 
 command -v php > /dev/null 2>&1 
@@ -59,7 +64,8 @@ if [[ $? == 1 ]]; then
 	echo -e "$red php not found! $farblos" 
 	sleep 0.5
 	echo -e "$yellow installing php... $farblos"
-	sudo apt-get install php
+	sleep 0.5
+	sudo apt-get install -y php
 	let v++
 fi
 if [[ $v == 0 ]]; then 
