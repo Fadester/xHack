@@ -9,7 +9,7 @@
 - Done!
 
 # Disclaimer
-- Diese Tool wurde nur für Demonstrationszwecke entwickelt
+- This tool was developed for demonstration purposes only
 
 - Don't do anything illegal!
 
