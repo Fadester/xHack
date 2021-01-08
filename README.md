@@ -7,3 +7,11 @@
 - sudo bash install.sh
 - sudo bash xHack
 - Done!
+
+# Disclaimer
+- Diese Tool wurde nur für Demonstrationszwecke entwickelt
+
+- Don't do anything illegal!
+
+- Bleibt brav Jungs
+
