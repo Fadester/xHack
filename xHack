@@ -29,6 +29,7 @@ command -v aircrack-ng > /dev/null 2>&1 || { echo >&2 "You need aircrack-ng to u
 command -v curl > /dev/null 2>&1 || { echo >&2 "You need curl to use this script! Run install.sh"; exit 1; }
 command -v php > /dev/null 2>&1 || { echo >&2 "You need php to use this script! Run install.sh"; exit 1; }
 command -v fcrackzip > /dev/null 2>&1 || { echo >&2 "You need fcrackzip to use this script! Run install.sh"; exit 1; }
+command -v xterm > /dev/null 2>&1 || { echo >&2 "You need xterm to use this script! Run install.sh"; exit 1; }
 
 trap 'printf "\n";stop_xHack;exit 1' 2
 
